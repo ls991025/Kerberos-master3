@@ -97,9 +97,9 @@ public class Authenticator implements ActionListener{
 		button3=new JButton("连接V");
 		button3.addActionListener(this);
 		button3.setBounds(25,300,150,25);
-		/*button4=new JButton("一键连接");
-		button4.addActionListener(this);
-		button4.setBounds(25,340,150,25);*/
+		//button4=new JButton("一键连接");
+		//button4.addActionListener(this);
+		//button4.setBounds(25,340,150,25);
 		button5=new JButton("注册");
 		button5.addActionListener(this);
 		button5.setBounds(25,380,150,25);
@@ -354,14 +354,14 @@ public class Authenticator implements ActionListener{
 						C_Search v2=new C_Search(clientSocket,keycv,ta,ID);
 						v2.ini();
 						break;
-					case "20171003":
+					/*case "20171003":
 						C_GetInfo v3=new C_GetInfo(clientSocket,keycv,ta);
 						v3.ini();
 						sout.flush();
 						break;
 					case "20171004":
 						ta.append("server4:\n");
-						break;
+						break;*/
 					default:
 						ta.append("vid错误\n");					//服务id错误，向服务端发送“！”，及时释放资源
 						String er=Util.toBinaryString("!");

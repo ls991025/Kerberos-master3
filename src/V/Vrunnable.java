@@ -1,10 +1,5 @@
 package V;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.io.OutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.math.BigInteger;
 import java.net.Socket;
 
@@ -94,12 +89,12 @@ public class Vrunnable implements Runnable{
 				case "20171002":
 					Search(s);
 					break;
-				case "20171003":
+				/*case "20171003":
 					GetInfo(s);
-					break;
-				case "20171004":
+					break;*/
+				/*case "20171004":
 					text.append("server4:\n");
-					break;
+					break;*/
 				default:
 					text.append("vid错误\n");
 					f=false;						//线程结束释放资源
@@ -177,15 +172,16 @@ public class Vrunnable implements Runnable{
 		text.append("Csig:"+Csig+"\n");
 		
 		String ans="抱歉，没找到该单词!";
-		FileReader read=null;
+		InputStreamReader read=null;
         String str=null;
         BufferedReader br=null;
         
 		for(int i=0;i<w.length-1;++i)
 		{
 			try {
-            read=new FileReader("资源文件/单词");
- 	        br = new BufferedReader(read);
+            //read=new FileReader("资源文件/单词.txt");
+				read= new InputStreamReader(new FileInputStream("资源文件/单词.txt"), "GBK");
+				br = new BufferedReader(read);
 	        while ((str = br.readLine()) != null) {
 		         String str2[]=str.split(" +",2);
 		         if(w[i].equals(str2[0])) {
@@ -209,7 +205,7 @@ public class Vrunnable implements Runnable{
 		}
 		
    }
-	public void GetInfo(String name) {//获取文件信息
+	/*public void GetInfo(String name) {//获取文件信息
 		String[] n=name.split("[\n \t\0]+");
 		
 		text.append("用户简介:\n");
@@ -284,5 +280,5 @@ public class Vrunnable implements Runnable{
 		}
         cout.println("#");
         cout.flush();
-	}  
+	}  */
 }

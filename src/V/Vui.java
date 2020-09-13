@@ -25,7 +25,7 @@ public class Vui implements ActionListener{
 		dialogPane.setLayout(null);
 		dialogPane.setBackground(Color.white);
 		d.setBounds(700,100,620,500);          //设置窗口的大小
-		label1.setText("*****************************Server*****************************");
+		label1.setText("                             Server                             ");
 		label1.setFont(new Font("",1,20));   //字体设计
 		label1.setBounds(25, 1, 620, 80);      //设置显示信息的位置		
 

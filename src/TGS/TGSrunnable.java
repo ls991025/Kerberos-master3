@@ -78,7 +78,7 @@ public class TGSrunnable implements Runnable{
 		//String ADt  = Tickettgs.getAd();
 
 		String TS3 = TGSpackage.GetTS();
-		linksql a=new linksql();
+		//linksql a=new linksql();
 		String AD = Authen.getAd();
 		String CID = Authen.getSrc_id();
 

@@ -55,10 +55,10 @@ public class C_Search implements ActionListener {
 		dialogPane.setLayout(null);
 		dialogPane.setBackground(Color.white);
 		d.setBounds(700,100,620,520);          //设置窗口的大小
-		label1.setText("*****************************电子词典*****************************");
+		label1.setText("                             电子词典                             ");
 		label1.setFont(new Font("",1,20));   //字体设计
 		label1.setBounds(25, 0, 620, 80);      //设置显示信息的位置
-		label2.setText("单词（汉/英）：");
+		label2.setText("单词：");
 		label2.setBounds(25, 50, 100, 25);
 		text=new JTextField();
 		text.setBounds(25, 80, 400, 25);
